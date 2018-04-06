@@ -11,10 +11,6 @@ validate_button = '/html/body/form/div[2]/input[2]'
 save_button = '/html/body/form/div[2]/input[3]'
 
 
-def get_browser_type():
-    browser_name = get_default_browser_name()
-
-
 def type_into_browser_element_by_id(identification, text):
     element = browser.find_element_by_id(identification)
     element.send(keys)
@@ -25,8 +21,8 @@ def click_browser_element_by_xpath(xpath):
     element.click()
 
 
-user = raw_input("What is your username?")
-pwd = raw_input("What is your password?")
+user = raw_input("What is your username? ")
+pwd = raw_input("What is your password? ")
 browser.get(link)
 type_into_browser_element_by_id("LDAP_UARK_ID", user)
 type_into_browser_element_by_id("LDAP_PASSWORD", pwd)
