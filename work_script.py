@@ -13,7 +13,7 @@ save_button = '/html/body/form/div[2]/input[3]'
 
 def type_into_browser_element_by_id(identification, text):
     element = browser.find_element_by_id(identification)
-    element.send(keys)
+    element.send_keys(text)
 
 
 def click_browser_element_by_xpath(xpath):
